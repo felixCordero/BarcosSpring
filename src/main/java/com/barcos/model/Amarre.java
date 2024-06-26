@@ -19,7 +19,7 @@ public class Amarre {
     private int profundidad;
     @Column(name = "longitud")
     private int longitud;
-    @Column(name = "electricidad")
+    @Column(name = "electricidad",nullable = false)
     private boolean electricidad;
     @OneToOne
     private Barco barco;
