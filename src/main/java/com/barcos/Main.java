@@ -16,14 +16,14 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         Barco barco1 = new Barco();
-        barco1.setNombre("Barco Ejemplo");
+        barco1.setNombre("Bribon");
         barco1.setTipo("Velero");
         barco1.setEslora(10);
         barco1.setManga(3);
         barco1.setCapacidad(6);
 
         Barco barco2 = new Barco();
-        barco2.setNombre("Barco Ejemplo");
+        barco2.setNombre("Guebon");
         barco2.setTipo("Velero");
         barco2.setEslora(10);
         barco2.setManga(3);
