@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -12,6 +13,7 @@ import java.util.List;
 public class Barco {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = ("id"))
     private Long id;
     @Column(name = "nombre_barco")
     private String nombre;
@@ -25,8 +27,8 @@ public class Barco {
     private int capacidad;
     @OneToOne(mappedBy = "barco", cascade = CascadeType.ALL)
     private Amarre amarre;
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "barco_regata",joinColumns = @JoinColumn(name = "barco_id"),
             inverseJoinColumns = @JoinColumn(name = "regata_id"))
-    private List<Regata> regatas;
+    private List<Regata> regatas = new ArrayList<Regata>();
 }

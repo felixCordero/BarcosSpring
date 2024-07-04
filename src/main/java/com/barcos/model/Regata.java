@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -24,5 +25,5 @@ public class Regata {
     @Column(name = "distancia")
     private  int distancia;
     @ManyToMany(mappedBy = "regatas")
-    private List<Barco> barcos;
+    private List<Barco> barcos = new ArrayList<Barco>();
 }
