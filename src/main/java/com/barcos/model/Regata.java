@@ -9,6 +9,7 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
+@Table(name = "regatas")
 @Data
 @NoArgsConstructor
 public class Regata {
